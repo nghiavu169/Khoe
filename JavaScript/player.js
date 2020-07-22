@@ -29,13 +29,16 @@ window.addEventListener("keyup", function (e) {
     delete keys[e.keyCode];
     player.moving = false;
 });
-
+let countbullet = 0;
 function movePlayer() {
     /*if (keys[38] && player.y > 0) {
         player.y -= player.speed;
         player.frameY = 3;
         player.moving = true;
-    }*/
+    }*/if (keys[32]){
+        countbullet++;
+        bullets[countbullet] = new Bullet(player_x - 5.5,player_y - 30);
+    }
     if (keys[37] && player.x > 0) {
         player.x -= player.speed;
         player.frameY = 3;
@@ -57,6 +60,6 @@ function movePlayer() {
 
 
 function handlePlayerFrame() {
-    if (player.frameX < 3 ) player.frameX++;
+    if (player.frameX < 3 && player.moving) player.frameX++;
     else player.frameX = 0;
 }

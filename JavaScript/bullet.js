@@ -18,13 +18,14 @@ let Bullet = function (x,y) {
                 this.x = player_x - 5.5;
                 this.y = player_y - 30;
                 this.isGone = true;
+                enemys[i].gotShooted();
             }
         }
     }
 };
-let bullet = new Bullet(player_x - 5.5,player_y - 30);
+/*let bullet = new Bullet(player_x - 5.5,player_y - 30);
 let bulletImg = new Image();
-bulletImg.src = 'fireball.png';
+bulletImg.src = 'images/fireball.png';
 
 function fireBall() {
     if (bullet.y < 0){
@@ -33,19 +34,18 @@ function fireBall() {
         bullet.y = player_y - 30;
     }
     bullet.y -= bullet.speed;
-}
+}*/
 
 
-/*let bullets = [];
+let bullets = [];
 for (let i = 0; i < 20; i++) {
     player_x = player.x + player.width / 2 ;
     player_y = player.y + player.height / 2 + 100 *i - 1900;
-    bullets[i] = new Bullet(player_x - 5.5,player_y - 30);
     bullets[i].img = new Image();
     bullets[i].img.src = 'images/fireball.png'
-}*/
+}
 
-/*function fireBall() {
+function fireBall() {
     for (let i = 0; i < 20; i++){
     if (bullets[i].y < 0){
         player_x = player.x + player.width / 2 ;
@@ -53,4 +53,4 @@ for (let i = 0; i < 20; i++) {
         bullets[i].y = player_y - 30;
     }
     bullets[i].y -= bullets[i].speed;
-}}*/
+}}

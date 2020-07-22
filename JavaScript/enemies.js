@@ -68,16 +68,18 @@ let Enemy = function(x,y,frameX,frameY){
         }
     }
     this.gotShooted = function () {
-        let bullet_x = bullet.x + bullet.width / 2;
-        let bullet_y = bullet.y + bullet.height / 2;
-        if (Math.abs(this.xcenter - bullet_x) < (this.width + bullet.width) / 2
-            && Math.abs(this.ycenter - bullet_y) < (this.height + bullet.height) / 2 )
+        for (let i = 0; i < 20; i++) {
+        let bullet_x = bullets[i].x + bullets[i].width / 2;
+        let bullet_y = bullets[i].y + bullets[i].height / 2;
+        if (Math.abs(this.xcenter - bullet_x) < (this.width + bullets[i].width) / 2
+            && Math.abs(this.ycenter - bullet_y) < (this.height + bullets[i].height) / 2 )
         {
             this.isGhost = true;
             this.width = 0;
             this.height = 0;
+            bullets[i].Hit();
         }
-    }
+    }}
 }
 
 

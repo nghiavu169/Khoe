@@ -46,12 +46,12 @@ function animate() {
         handlePlayerFrame();
         handleBossFrame();
         fireBall();
-        ctx.drawImage(bulletImg,bullet.x,bullet.y,bullet.width,bullet.height);
-        bullet.Hit();
-        /*for (let i = 0; i < 20; i++) {
+        /*ctx.drawImage(bulletImg,bullet.x,bullet.y,bullet.width,bullet.height);
+        bullet.Hit();*/
+        for (let i = 0; i < bullets.length; i++) {
             ctx.drawImage(bullets[i].img,bullets[i].x,bullets[i].y,bullets[i].width,bullets[i].height);
             bullets[i].Hit();
-        }*/
+        }
 
     }
 }
@@ -65,3 +65,7 @@ function endGame() {
         alert('Game Over!');
     }
 }
+
+window.addEventListener('keydown',function (e) {
+
+})
