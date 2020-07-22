@@ -81,6 +81,7 @@ let Enemy = function(x,y,frameX,frameY){
 }
 
 
+
 let enemys = [];
 for (let i = 0; i < 30; i++) {
     enemys[i] = new Enemy(Math.random()*1368,Math.random()*300,0,0);

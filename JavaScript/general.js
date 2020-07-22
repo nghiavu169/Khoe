@@ -46,12 +46,17 @@ function animate() {
         handlePlayerFrame();
         handleBossFrame();
         fireBall();
-        ctx.drawImage(fireball,bullet.x,bullet.y,bullet.width,bullet.height);
-
+        ctx.drawImage(bulletImg,bullet.x,bullet.y,bullet.width,bullet.height);
+        alert(bullet.x)
+        bullet.Hit();
+        /*for (let i = 0; i < 20; i++) {
+            ctx.drawImage(bullets[i].img,bullets[i].x,bullets[i].y,bullets[i].width,bullets[i].height);
+            bullets[i].Hit();
+        }*/
 
     }
 }
-startAnimating(20);
+startAnimating(18);
 
 function endGame() {
     if (live === 0){

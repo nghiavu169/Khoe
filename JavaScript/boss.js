@@ -5,7 +5,7 @@ let boss = {
     height: 96,
     frameX: 0,
     frameY: 0,
-    speed: 20,
+    speed: 10,
 };
 
 
@@ -14,10 +14,10 @@ bOss.src = 'images/bahamut.png'
 
 function moveBoss(){
     if (boss.x < 0){
-        boss.speed = -20;
+        boss.speed = -10;
     }
     if (boss.x > canvas.width - boss.width){
-        boss.speed = 20;
+        boss.speed = 10;
     }
     boss.x -= boss.speed;
 }

@@ -57,6 +57,6 @@ function movePlayer() {
 
 
 function handlePlayerFrame() {
-    if (player.frameX < 3 && player.moving) player.frameX++;
+    if (player.frameX < 3 ) player.frameX++;
     else player.frameX = 0;
 }
