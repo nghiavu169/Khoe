@@ -47,7 +47,6 @@ function animate() {
         handleBossFrame();
         fireBall();
         ctx.drawImage(bulletImg,bullet.x,bullet.y,bullet.width,bullet.height);
-        alert(bullet.x)
         bullet.Hit();
         /*for (let i = 0; i < 20; i++) {
             ctx.drawImage(bullets[i].img,bullets[i].x,bullets[i].y,bullets[i].width,bullets[i].height);
