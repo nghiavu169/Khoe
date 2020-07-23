@@ -30,16 +30,12 @@ window.addEventListener("keyup", function (e) {
     player.moving = false;
 });
 function movePlayer() {
-    if (keys[38]){
+    if (keys[32]){
         let player_x = player.x + player.width / 2 ;
         let player_y = player.y + player.height / 2;
         bullets.push(new Bullet(player_x - 5.5,player_y - 30));
     }
 
-
-    if (keys[40]){
-        bullets.shift();
-    }
     /*if (keys[38] && player.y > 0) {
         player.y -= player.speed;
         player.frameY = 3;

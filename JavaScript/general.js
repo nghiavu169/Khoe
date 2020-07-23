@@ -69,7 +69,7 @@ startAnimating(18);
  let gameOver = new Image();
  gameOver.src = 'images/gameover.gif';
 function endGame() {
-    dragonFight.play();
+    dragonFight. play();
     if (live === 0){
         clearInterval(a);
         cancelAnimationFrame(b);

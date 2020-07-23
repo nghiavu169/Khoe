@@ -1,5 +1,5 @@
 let Enemy = function(x,y,frameX,frameY){
-    this.hp = 50;
+    this.hp = 1;
     this.img = 0;
     this.x = x;
     this.y = y;
@@ -78,8 +78,8 @@ let Enemy = function(x,y,frameX,frameY){
             score += 20;
             if (this.hp === 0){
             this.isGhost = true;
-            this.width = -1;
-            this.height = -1;
+            this.width = 0;
+            this.height = 0;
             }
         }
         }

@@ -17,11 +17,7 @@ let bullets = [];
 
 function fireBall() {
     for (let i = 0; i < bullets.length; i++){
-    if (bullets[i].y < 0){
-        player_x = player.x + player.width / 2 ;
-        bullets[i].x = player_x - 5.5;
-        bullets[i].y = player_y - 30;
-    }
+
     bullets[i].y -= bullets[i].speed;
 }}
 
