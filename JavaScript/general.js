@@ -7,6 +7,7 @@ let dragonFight = new Audio('music.mp3');
 
 
 let live = 3;
+let score = 0;
 let game_over = false;
 let a = setInterval(endGame,30);
 
@@ -36,6 +37,13 @@ function animate() {
         ctx.fillStyle = 'black';
         ctx.font = '25px Arial';
         ctx.fillText('Live: ' + live,0,20);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.fillStyle = 'black';
+        ctx.font = '25px Arial';
+        ctx.fillText('Score: ' + score,0,50);
         ctx.stroke();
         ctx.closePath();
 
