@@ -65,7 +65,6 @@ let Enemy = function(x,y,frameX,frameY){
             this.width = 0;
             this.height = 0;
             live--;
-
         }
     }
     this.gotShooted = function () {
