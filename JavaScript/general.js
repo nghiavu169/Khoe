@@ -3,6 +3,9 @@ let ctx = canvas.getContext("2d");
 canvas.width = 1400;
 canvas.height = 750;
 
+let dragonFight = new Audio('music.mp3');
+
+
 let live = 3;
 let game_over = false;
 let a = setInterval(endGame,30);
@@ -50,22 +53,20 @@ function animate() {
         bullet.Hit();*/
         for (let i = 0; i < bullets.length; i++) {
             ctx.drawImage(bullets[i].img,bullets[i].x,bullets[i].y,bullets[i].width,bullets[i].height);
-            bullets[i].Hit();
         }
 
     }
 }
 startAnimating(18);
-
+ let gameOver = new Image();
+ gameOver.src = 'images/gameover.gif';
 function endGame() {
+    dragonFight.play();
     if (live === 0){
         clearInterval(a);
         cancelAnimationFrame(b);
         game_over = true;
-        alert('Game Over!');
+        ctx.drawImage(gameOver,0,0,1400,750);
+        dragonFight.pause();
     }
 }
-
-window.addEventListener('keydown',function (e) {
-
-})

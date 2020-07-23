@@ -23,7 +23,6 @@ function moveBoss(){
 }
 
 
-
 function handleBossFrame() {
     if (boss.frameX < 3) boss.frameX++;
     else boss.frameX = 0;
