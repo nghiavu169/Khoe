@@ -33,17 +33,43 @@ function animate() {
         movePlayer();
         drawEnemy(bOss,boss.width * boss.frameX,0,boss.width,boss.height,boss.x,boss.y,boss.width,boss.height);
         moveBoss();
+        boss.gotShooted();
+
+        ctx.beginPath();
+        ctx.rect(700,0,700,10);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.rect(700,0,boss.hp,10);
+        ctx.fillStyle = 'red';
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.rect(0,0,700,10);
+        ctx.fillStyle = 'red';
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.rect(0,0,boss.h_p,10);
+        ctx.fillStyle = 'red';
+        ctx.fill();
+        ctx.closePath();
+
         ctx.beginPath();
         ctx.fillStyle = 'black';
         ctx.font = '25px Arial';
-        ctx.fillText('Live: ' + live,0,20);
+        ctx.fillText('Live: ' + live,0,30);
         ctx.stroke();
         ctx.closePath();
 
         ctx.beginPath();
         ctx.fillStyle = 'black';
         ctx.font = '25px Arial';
-        ctx.fillText('Score: ' + score,0,50);
+        ctx.fillText('Score: ' + score,0,60);
         ctx.stroke();
         ctx.closePath();
 
@@ -57,9 +83,9 @@ function animate() {
         handlePlayerFrame();
         handleBossFrame();
         fireBall();
-        /*ctx.drawImage(bulletImg,bullet.x,bullet.y,bullet.width,bullet.height);
-        bullet.Hit();*/
+
         for (let i = 0; i < bullets.length; i++) {
+            if (bullets[i].status) continue;
             ctx.drawImage(bullets[i].img,bullets[i].x,bullets[i].y,bullets[i].width,bullets[i].height);
         }
 

@@ -19,7 +19,7 @@ let Enemy = function(x,y,frameX,frameY){
         let selectCase = Math.floor(Math.random()*4)
         switch (selectCase) {
             case 0:
-                if (this.y <= 0) {
+                if (this.y <= 50) {
                     this.y += this.speed
                 } else {
                     this.y -= this.speed;
@@ -68,14 +68,17 @@ let Enemy = function(x,y,frameX,frameY){
         }
     }
     this.gotShooted = function () {
+        if (this.isGhost) return;
         for (let i = 0; i < bullets.length; i++) {
+            if (bullets[i].status) continue;
         let bullet_x = bullets[i].x + bullets[i].width / 2;
         let bullet_y = bullets[i].y + bullets[i].height / 2;
-        if (Math.abs(this.xcenter - bullet_x) < (this.width + bullets[i].width) / 4
-            && Math.abs(this.ycenter - bullet_y) < (this.height + bullets[i].height) / 4 )
+        if (Math.abs(this.xcenter - bullet_x) < (this.width + bullets[i].width) / 2
+            && Math.abs(this.ycenter - bullet_y) < (this.height + bullets[i].height) / 2 )
         {
             this.hp --;
             score += 20;
+            bullets[i].status = true;
             if (this.hp === 0){
             this.isGhost = true;
             this.width = 0;

@@ -33,14 +33,14 @@ function movePlayer() {
     if (keys[32]){
         let player_x = player.x + player.width / 2 ;
         let player_y = player.y + player.height / 2;
-        bullets.push(new Bullet(player_x - 5.5,player_y - 30));
+        bullets.push(new Bullet(player_x - 5.5,player_y - 30,'images/fireball.png'));
     }
 
-    /*if (keys[38] && player.y > 0) {
+    if (keys[38] && player.y > 0) {
         player.y -= player.speed;
         player.frameY = 3;
         player.moving = true;
-    }*/
+    }
 
 
     if (keys[37] && player.x > 0) {
@@ -48,11 +48,11 @@ function movePlayer() {
         player.frameY = 3;
         player.moving = true;
     }
-    /*if (keys[40] && player.y < canvas.height - player.height) {
+    if (keys[40] && player.y < canvas.height - player.height) {
         player.y += player.speed;
-        player.frameY = 0;
+        player.frameY = 3;
         player.moving = true;
-    }*/
+    }
     if (keys[39] && player.x < canvas.width - player.width) {
         player.x += player.speed;
         player.frameY = 3;

@@ -1,23 +1,19 @@
-let player_x = player.x + player.width / 2 ;
-let player_y = player.y + player.height / 2;
-let Bullet = function (x,y) {
+let Bullet = function (x,y,src) {
     this.img = new Image();
-    this.img.src = 'images/fireball.png';
+    this.img.src = src;
     this.width = 10;
     this.height = 20;
     this.x = x;
     this.y = y;
     this.speed = 20;
+    this.status = false;
 };
 
 let bullets = [];
 
 
-
-
 function fireBall() {
     for (let i = 0; i < bullets.length; i++){
-
     bullets[i].y -= bullets[i].speed;
 }}
 
