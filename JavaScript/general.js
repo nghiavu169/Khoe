@@ -42,7 +42,7 @@ function animate() {
         ctx.closePath();
 
         ctx.beginPath();
-        ctx.rect(700,0,boss.hp,10);
+        ctx.rect(0,0,boss.hp,10);
         ctx.fillStyle = 'red';
         ctx.fill();
         ctx.closePath();
