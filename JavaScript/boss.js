@@ -1,7 +1,6 @@
 
 let boss = {
-    h_p: 0,
-    hp: 700,
+    hp: 1400,
     x: 652,
     y: 0,
     xCenter: 0,
@@ -23,7 +22,6 @@ let boss = {
                 && Math.abs(this.yCenter - bullet_y) < (this.height + bullets[i].height) / 4 )
             {
                 this.hp --;
-                this.h_p ++;
                 score += 20;
                 if (this.hp === 0){
                     this.isGhost = true;

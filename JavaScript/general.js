@@ -36,7 +36,7 @@ function animate() {
         boss.gotShooted();
 
         ctx.beginPath();
-        ctx.rect(700,0,700,10);
+        ctx.rect(0,0,1400,10);
         ctx.fillStyle = 'white';
         ctx.fill();
         ctx.closePath();
@@ -47,17 +47,7 @@ function animate() {
         ctx.fill();
         ctx.closePath();
 
-        ctx.beginPath();
-        ctx.rect(0,0,700,10);
-        ctx.fillStyle = 'red';
-        ctx.fill();
-        ctx.closePath();
 
-        ctx.beginPath();
-        ctx.rect(0,0,boss.h_p,10);
-        ctx.fillStyle = 'red';
-        ctx.fill();
-        ctx.closePath();
 
         ctx.beginPath();
         ctx.fillStyle = 'black';
